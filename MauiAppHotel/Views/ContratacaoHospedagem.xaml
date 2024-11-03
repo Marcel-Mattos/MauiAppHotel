@@ -2,22 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
-             Title="ContratacaoHospedagem"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray300}">
-    
+             Title="ContratacaoHospedagem">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="Gray" Offset="0.4"/>
+            <GradientStop Color="Blue" Offset="0.8"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="20">
         <Label Text="Cálculo da Diária" 
                FontSize="40"
                FontAttributes="Bold,Italic"
-               TextColor="{StaticResource MidnightBlue}"/>
-
+               TextColor="Black"/>
+       
         <Frame Padding="10">
             <VerticalStackLayout>
+                <Label Text="Passo 1: Quantas pessoas irão se hospedar" BackgroundColor="OrangeRed" FontAttributes="Bold"></Label>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*"
-                      BackgroundColor="IndianRed">
+                      BackgroundColor="OrangeRed">
+                    
 
                     <Label Grid.Row="0" Grid.Column="0"
                            Text="Adultos: " />
@@ -26,7 +34,7 @@
                            TextColor="Black" 
                            Text="{Binding Value}" 
                            BindingContext="{x:Reference stp_adultos}"/>
-
+ 
                     <Stepper Grid.Row="0" Grid.Column="2"
                              x:Name="stp_adultos"
                              Minimum="0"
@@ -47,8 +55,8 @@
                           Maximum="10"
                           Increment="1" />      
                 </Grid>
-
-                <Label Text="Escolha uma Suíte: " BackgroundColor="DarkSeaGreen" />
+                <Label></Label>
+                <Label Text="Passo 2: Escolha uma Suíte " BackgroundColor="DarkSeaGreen" FontAttributes="Bold"/>
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua acomodação" 
@@ -57,9 +65,10 @@
                 <Frame Padding="10"
                        Margin="10">
                     
-                    <VerticalStackLayout BackgroundColor="RoyalBlue">
+                    <VerticalStackLayout BackgroundColor="GreenYellow">
                         
-                            <Label Text="Periodo de Estadia"/>
+                            <Label Text="Passo 3: Qual o período de estadia" FontAttributes="Bold"/>
+                        <Label></Label>
                                 <HorizontalStackLayout>
                                     <Label Text="Check-in: "/>
                                     <DatePicker x:Name="dtpck_checkin"
@@ -75,15 +84,18 @@
                     </VerticalStackLayout>
                         
                 </Frame>
+                <Label></Label>
+                <Button Text="Passo 4: Calcular Valores " BackgroundColor="Blue" FontAttributes="Bold"/>
+                <Label></Label>
+                <Button Text="Sobre o Desenvolvedor" Clicked="Button_Clicked"
+                        BackgroundColor="Black"/>
 
-                <Button Text="Próximo >>>" BackgroundColor="DarkGreen"/>
-                
             </VerticalStackLayout>
         </Frame>
+     
         
-
-
-
-
+        
+        
+        
     </VerticalStackLayout>
 </ContentPage>
