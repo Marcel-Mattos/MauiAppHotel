@@ -7,8 +7,8 @@
     
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-            <GradientStop Color="Blue" Offset="0.0"/>
-            <GradientStop Color="Gray" Offset="0.8"/>
+            <GradientStop Color="Black" Offset="0.0"/>
+            <GradientStop Color="Silver" Offset="0.8"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 
@@ -20,7 +20,7 @@
             FontAttributes="Bold"
             HorizontalOptions="CenterAndExpand" />
 
-        <Frame Padding="20" BackgroundColor="IndianRed">
+        <Frame Padding="20" BackgroundColor="White">
             <Label Text="Marcel Scarpari de Mattos, nasceu em 1991 no interior de
 São Paulo. Começou cursos em lógica da programação em 2023 por
 conta própria e em 2024 ingressou no curso de Desenvolvimento de
@@ -33,7 +33,7 @@ Sistemas pela ETEC, do qual tem muito prazer em fazer parte." />
             FontAttributes="Bold"
             HorizontalOptions="CenterAndExpand" />
 
-        <Frame Padding="20" BackgroundColor="CadetBlue">
+        <Frame Padding="20" BackgroundColor="White">
             <Label Text="Este aplicativo faz parte da aula 13 de Desenvolvimento
 de Sistemas pela ETEC, turma DWK de 2024. Feito com .NET MAUI." />
         </Frame>
