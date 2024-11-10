@@ -1,23 +1,55 @@
 ﻿
+using MauiAppHotel.Models;
+
 namespace MauiAppHotel
 {
     public partial class App : Application
     {
-        public App()
+        public List<Quarto> lista_quartos = new List<Quarto>
         {
-            InitializeComponent();
+              new Quarto()
+              {
+                Descricao = "Suite Super Luxo",
+                ValorDiariaAdulto = 110.0,
+                ValorDiariaCrianca = 55.0,
+              },
+              new Quarto()
+              {
+                 Descricao = "Suite Luxo",
+                 ValorDiariaAdulto = 80.0,
+                 ValorDiariaCrianca = 40.0,
+              },
+              new Quarto()
+              {
+                 Descricao = "Suite Single",
+                 ValorDiariaAdulto = 50.0,
+                 ValorDiariaCrianca = 25.0,
+              },
+              new Quarto()
+              {
+                 Descricao = "Suite Crise",
+                 ValorDiariaAdulto = 25.0,
+                 ValorDiariaCrianca = 12.5,
+                }
+        };
 
-            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
-        }
+            public App()
+            {
+                InitializeComponent();
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
+                MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+            }
 
-            var window = base.CreateWindow(activationState);
-            window.Width = 400;
-            window.Height = 700;
+            protected override Window CreateWindow(IActivationState? activationState)
+            {
 
-            return window;
-        }
+                var window = base.CreateWindow(activationState);
+                window.Width = 400;
+                window.Height = 700;
+
+                return window;
+            }
     }
-}
+}   
+
+

@@ -12,9 +12,9 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
         <Label Text="Suite Super Luxo"
-               FontSize="20"
+               FontSize="30"
                FontFamily=""
                FontAttributes="Bold,Italic"
                TextColor="Black" />
