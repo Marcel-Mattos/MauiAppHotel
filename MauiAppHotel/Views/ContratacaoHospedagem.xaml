@@ -88,7 +88,7 @@
                         
                 </Frame>
                 <Label></Label>
-                <Button Text="Passo 4: Calcular Valores " BackgroundColor="ForestGreen" FontAttributes="Bold"/>
+                <Button Text="Passo 4: Calcular Valores " Clicked="Button_Clicked_1" BackgroundColor="ForestGreen" FontAttributes="Bold"/>
                 <Label></Label>
                 <Button Text="Sobre o Desenvolvedor" Clicked="Button_Clicked"
                         BackgroundColor="Black"/>
